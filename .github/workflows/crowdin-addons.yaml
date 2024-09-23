@@ -36,5 +36,6 @@ jobs:
           ls -la
       - name: Push crowdin changes
         run: |
+          git add .
           git commit -am "Crowdin download"
           git push
