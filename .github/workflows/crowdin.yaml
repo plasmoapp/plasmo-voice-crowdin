@@ -9,7 +9,35 @@ permissions:
   contents: write
 
 jobs:
-  crowdin-download:
+  crowdin-pv:
+    runs-on: ubuntu-latest
+    container:
+      image: crowdin/cli:4.1.2
+      env:
+        CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID_PV }}
+        CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN_PV }}
+    steps:
+      - name: Configure Git
+        run: |
+          apk --no-cache add curl git git-lfs jq gnupg
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - uses: actions/checkout@v4
+        with:
+          ref: pv
+      - name: Download crowdin bundles
+        run: |
+          crowdin bundle download 2
+          crowdin bundle download 4
+          find . -type f -empty -print -delete
+          find . -type d -empty -print -delete
+      - name: Push crowdin changes
+        run: |
+          git add .
+          (git commit -am "Crowdin download" && git push) || echo "No changes to commit"
+
+  crowdin-addons:
     runs-on: ubuntu-latest
     container:
       image: crowdin/cli:4.1.2
