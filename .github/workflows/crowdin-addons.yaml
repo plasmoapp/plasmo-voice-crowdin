@@ -1,0 +1,32 @@
+name: Crowdin Addons
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  crowdin-download:
+    runs-on: ubuntu-latest
+    container:
+      image: crowdin/cli:4.1.2
+      env:
+        CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+        CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+    steps:
+      - name: Download crowdin bundles
+        run: |
+          crowdin download bundle 8
+          crowdin download bundle 10
+          find . -type f -empty -print -delete
+          find . -type d -empty -print -delete
+      - name: Commit crowdin changes
+        run: |
+          git checkout addons
+          git config --global user.name 'Github Actions'
+          git config --global user.email 'actions@users.noreply.github.com'
+          git commit -am "Crowdin download"
+          git push
