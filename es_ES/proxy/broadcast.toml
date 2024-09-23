@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "Transmisión"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Transmitiendo a %s"
+broadcasting_wide = "Transmitiendo a %s-wide"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "Establecer transmisión con el modo proxy"
+server_set = "Establecer transmisión con el modo de servidor a %s"
+server_usage = "Uso: /vbroadcastproxy server <server names>"
+usage = "Uso: /vbroadcastproxy <server|proxy> <server names>"

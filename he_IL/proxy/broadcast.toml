@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "שידור"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "משדר ל-%s"
+broadcasting_wide = "משדר ל %s-רחב"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "הגדר שידור עם מצב Proxy"
+server_set = "הגדר שידור עם מצב שרת ל-%s"
+server_usage = "שימוש: <vbroadcastproxy server <server names/"
+usage = "שימוש: <vbroadcastproxy <server|proxy> <server names/"

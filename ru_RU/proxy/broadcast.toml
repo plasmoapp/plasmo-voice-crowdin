@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "Вещание"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Вещание на %s"
+broadcasting_wide = "Вещание на %s"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "Установлено вещание на прокси"
+server_set = "Установлено вещание на серверы: %s"
+server_usage = "Использование: /vbroadcastproxy server <названия серверов>"
+usage = "Использование: /vbroadcastproxy <server|proxy> <названия серверов>"

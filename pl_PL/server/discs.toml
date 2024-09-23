@@ -1,0 +1,30 @@
+[client.pv.activation]
+discs = "Płyty"
+
+[server.pv.addon.discs.actionbar]
+loading = "Wczytywanie..."
+playing = "Aktualnie odtwarzane: %s"
+track_not_found = "Nie znaleziono ścieżki: %s"
+
+[server.pv.addon.discs.arg]
+label = "[etykieta]"
+search = "<wyszukiwanie>"
+url = "<url>"
+
+[server.pv.addon.discs.error]
+erase_wrong_item = "&cNie można wyczyścić tego przedmiotu"
+get_track_fail = "&cNie udało się uzyskać utworu: %s"
+no_permission = "&cBrak permisji"
+not_a_record = "&cPotrzebujesz płyty w twojej dłoni, aby ją wypalić"
+search_fail = "&cNie udało się uzyskać wyników wyszukiwania: %s"
+unknown_subcommand = "&cNieznane podpolecenie. Dostępne polecenia: %s"
+
+[server.pv.addon.discs.format]
+search_entry = "&e%1$s &7przez %2$s"
+
+[server.pv.addon.discs.success]
+burn = "&aPłyta wypalona. Etykieta: %s"
+erase = "&aNiestandardowy dźwięk usunięty"
+
+[server.pv.addon.discs.usage]
+burn = "&cUżycie: /discs burn <url> [etykieta]"

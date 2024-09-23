@@ -1,0 +1,30 @@
+[client.pv.activation]
+discs = "唱片"
+
+[server.pv.addon.discs.actionbar]
+loading = "正在加载…"
+playing = "正在播放：%s"
+track_not_found = "未找到音频：%s"
+
+[server.pv.addon.discs.arg]
+label = "[标签]"
+search = "<搜索>"
+url = "<URL>"
+
+[server.pv.addon.discs.error]
+erase_wrong_item = "&c不能擦除这个物品"
+get_track_fail = "&c未能成功获取音频：%s"
+no_permission = "&c没有权限"
+not_a_record = "&c你需要拿着一张唱片才能刻录它"
+search_fail = "&c未能成功获取搜索结果：%s"
+unknown_subcommand = "&c未知子命令。可用命令：%s"
+
+[server.pv.addon.discs.format]
+search_entry = "&e%1$s&7 - %2$s"
+
+[server.pv.addon.discs.success]
+burn = "&a已刻录唱片。标签：%s"
+erase = "&a已擦除自定义音频"
+
+[server.pv.addon.discs.usage]
+burn = "&c用法：/discs burn <URL> [标签]"

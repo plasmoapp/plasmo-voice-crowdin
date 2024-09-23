@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "Nadawanie"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Nadawanie do %s"
+broadcasting_wide = "Nadawanie na skalę %s"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "Ustawiono nadawanie z trybem proxy"
+server_set = "Ustawiono nadawanie z trybem serwera na %s"
+server_usage = "Użycie: /vbroadcastproxy serwer <nazwy serwerów>"
+usage = "Użycie /vbroadcastproxy <serwer|proxy> <nazwy serwerów>"

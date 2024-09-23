@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "방송"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "%s 에 방송중"
+broadcasting_wide = "%s 전체에 방송중"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "방송을 프록시로 설정"
+server_set = "방송을 %s 서버로 설정"
+server_usage = "사용법: /vbroadcastproxy server <server names>"
+usage = "사용법: /vbroadcastproxy <server|proxy> <server names>"

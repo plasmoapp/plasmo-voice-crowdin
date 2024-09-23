@@ -1,0 +1,31 @@
+[client.pv.activation]
+discs = "음반"
+
+[server.pv.addon.discs.actionbar]
+loading = "로딩중..."
+playing = "현재 재생 중: %s"
+track_not_found = "%s 트랙을 찾을 수 없습니다."
+
+[server.pv.addon.discs.arg]
+label = "[라벨]"
+search = "<검색>"
+url = "<url>"
+
+[server.pv.addon.discs.error]
+erase_wrong_item = "&c이 아이템을 지울 수 없습니다."
+get_track_fail = "&c%s 트랙을 가져오지 못했습니다."
+no_permission = "&c권한이 없습니다."
+not_a_record = "&c음반을 구우려면 손에 음반을 들고 있어야 합니다."
+not_burnable = "&c이 음반은 구울 수 없습니다."
+search_fail = "&c%s에 대한 검색 결과가 없습니다."
+unknown_subcommand = "&c하위 명령어가 올바르지 않습니다. 사용 가능한 명령어들은 다음과 같습니다: %s"
+
+[server.pv.addon.discs.format]
+search_entry = "&7%2$s 의 &e%1$s"
+
+[server.pv.addon.discs.success]
+burn = "&a음반이 구워졌습니다. 제목: %s"
+erase = "&a커스텀 오디오가 삭제되었습니다."
+
+[server.pv.addon.discs.usage]
+burn = "&c사용법: /discs burn <링크> [라벨]"

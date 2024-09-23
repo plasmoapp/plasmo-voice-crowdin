@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "Транслювати"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Трансляція на %s"
+broadcasting_wide = "Трансляція на %s- широкий"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "Встановити трансляцію через проксі"
+server_set = "Установлено мовлення з сервером %s"
+server_usage = "Використання: /vbroadcastproxy сервер <server names>"
+usage = "Використання: /vbroadcastproxy <server|proxy> <server names>"
