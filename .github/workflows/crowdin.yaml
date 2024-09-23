@@ -1,4 +1,4 @@
-name: Crowdin Addons
+name: Crowdin
 
 on:
   workflow_dispatch:
