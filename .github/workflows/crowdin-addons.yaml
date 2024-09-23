@@ -30,6 +30,7 @@ jobs:
       - name: Push crowdin changes
         run: |
           apk --no-cache add curl git git-lfs jq gnupg
+          ls -la
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global --add safe.directory $GITHUB_WORKSPACE
