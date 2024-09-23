@@ -22,6 +22,7 @@ jobs:
           ref: addons
       - name: Download crowdin bundles
         run: |
+          cd "${GITHUB_WORKSPACE}" || exit 1
           crowdin bundle download 8
           crowdin bundle download 10
           find . -type f -empty -print -delete
