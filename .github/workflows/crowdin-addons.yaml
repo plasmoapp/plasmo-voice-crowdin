@@ -17,16 +17,18 @@ jobs:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: addons
       - name: Download crowdin bundles
         run: |
-          crowdin download bundle 8
-          crowdin download bundle 10
+          crowdin bundle download 8 --source="**/*" --translation="%two_letters_code%/%original_file_name%"
+          crowdin bundle download 10 --source="**/*" --translation="%two_letters_code%/%original_file_name%"
           find . -type f -empty -print -delete
           find . -type d -empty -print -delete
-      - name: Commit crowdin changes
+      - name: Push crowdin changes
         run: |
-          git checkout addons
-          git config --global user.name 'Github Actions'
-          git config --global user.email 'actions@users.noreply.github.com'
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Crowdin download"
           git push
