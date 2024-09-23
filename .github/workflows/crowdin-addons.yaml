@@ -35,4 +35,4 @@ jobs:
       - name: Push crowdin changes
         run: |
           git add .
-          echo 'git commit -am "Crowdin download" && git push'
+          (git commit -am "Crowdin download" && git push) || echo "No changes to commit"
