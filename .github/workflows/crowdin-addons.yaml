@@ -17,22 +17,24 @@ jobs:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
     steps:
+      - name: Configue Git
+        run: |
+          apk --no-cache add curl git git-lfs jq gnupg
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/checkout@v4
         with:
           ref: addons
       - name: Download crowdin bundles
         run: |
-          cd "${GITHUB_WORKSPACE}" || exit 1
           crowdin bundle download 8
           crowdin bundle download 10
+          ls -la
           find . -type f -empty -print -delete
           find . -type d -empty -print -delete
+          ls -la
       - name: Push crowdin changes
         run: |
-          apk --no-cache add curl git git-lfs jq gnupg
-          ls -la
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global --add safe.directory $GITHUB_WORKSPACE
           git commit -am "Crowdin download"
           git push
