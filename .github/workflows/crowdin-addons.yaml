@@ -28,6 +28,7 @@ jobs:
           find . -type d -empty -print -delete
       - name: Push crowdin changes
         run: |
+          apk --no-cache add curl git git-lfs jq gnupg
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Crowdin download"
