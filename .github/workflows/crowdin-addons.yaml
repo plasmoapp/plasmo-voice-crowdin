@@ -17,7 +17,7 @@ jobs:
         CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID_ADDONS }}
         CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN_ADDONS }}
     steps:
-      - name: Configue Git
+      - name: Configure Git
         run: |
           apk --no-cache add curl git git-lfs jq gnupg
           git config --global user.name "github-actions[bot]"
