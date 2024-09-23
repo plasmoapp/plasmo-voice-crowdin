@@ -22,8 +22,8 @@ jobs:
           ref: addons
       - name: Download crowdin bundles
         run: |
-          crowdin bundle download 8 --source="**/*" --translation="%two_letters_code%/%original_file_name%"
-          crowdin bundle download 10 --source="**/*" --translation="%two_letters_code%/%original_file_name%"
+          crowdin bundle download 8
+          crowdin bundle download 10
           find . -type f -empty -print -delete
           find . -type d -empty -print -delete
       - name: Push crowdin changes
