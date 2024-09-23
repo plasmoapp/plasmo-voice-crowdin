@@ -1,4 +1,4 @@
-# Translation for Plasmo Voice and its addons
+# Translations for Plasmo Voice and its addons
 
 > [!WARNING]  
 > This is not the repository for submitting translations.
