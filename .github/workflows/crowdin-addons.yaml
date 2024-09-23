@@ -30,12 +30,9 @@ jobs:
         run: |
           crowdin bundle download 8
           crowdin bundle download 10
-          ls -la
           find . -type f -empty -print -delete
           find . -type d -empty -print -delete
-          ls -la
       - name: Push crowdin changes
         run: |
           git add .
-          git commit -am "Crowdin download"
-          git push
+          echo 'git commit -am "Crowdin download" && git push'
