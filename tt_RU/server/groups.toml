@@ -18,6 +18,10 @@ leave = "&c← Чыгу"
 next = "&e>"
 prev = "&e<"
 
+[server.pv.addon.groups.command.ban.error]
+already_banned = "&cУенчы төркемдә блокланды инде"
+usage = "&cКулланылу: /groups ban <уенчы>"
+
 [server.pv.addon.groups.command.browse.error]
 no_groups = "Төркемнәр юк. «/groups create» боерыгын кулланып, төркемнәрне ясагыз"
 page_not_found = "&cБит табылмады"
@@ -30,6 +34,7 @@ success = "&a%s уенчыга чакыру җибәрелде"
 
 [server.pv.addon.groups.command.invite.error]
 already_joined = "&cУенчы төркемгә кушылды инде"
+banned = "&cУенчы төркемдә блокланды"
 invite_self = "&cСез үзне чакыра алмыйсыз"
 usage = "&cКулланылу: /groups invite <уенчы>"
 
@@ -38,7 +43,12 @@ success = "&Сез төркемгә кушылды"
 
 [server.pv.addon.groups.command.join.error]
 already_joined = "&Сез төркемгә кушылды инде"
+banned = "&cСез бу төркемдә блокландыгыз"
 usage = "&cКулланылу: /groups join <төркемнең UUID-ы> [серсүз]"
+
+[server.pv.addon.groups.command.kick.error]
+not_in_group = "&cТөркемдә уенчы юк"
+usage = "&cКулланылу: /groups kick <уенчы>"
 
 [server.pv.addon.groups.command.leave]
 success = "&aСез төркемнән чыкты"
@@ -51,6 +61,10 @@ usage = "&cКулланылу: /groups set <байрак> <кыйммәт>"
 [server.pv.addon.groups.command.transfer.error]
 already_owner = "&cСез төркемнең хуҗасы инде"
 usage = "&cКулланылу: /groups transfer <уенчы>"
+
+[server.pv.addon.groups.command.unban.error]
+not_banned = "&cУенчы төркемдә блокланмады"
+usage = "&cКулланылу: /groups unban <уенчы>"
 
 [server.pv.addon.groups.command.unset.error]
 password_not_set = "&cТөркем серсүз ярдәмендә сакланмады инде"
@@ -79,6 +93,7 @@ players_and_owner = "&7Уенчы: &r%1$s&7, хуҗа: &r%2$s"
 password_protected = "&6⛨"
 
 [server.pv.addon.groups.notifications]
+banned = "&cСез төркемдә блокландыгыз"
 group_deleted = "Төркем бетерелде"
 kicked = "&cСез төркемнән чыгарылды"
 name_change = "«%1$s» төркем яңа исеме: «%2$s»"
@@ -89,9 +104,11 @@ permissions_changed = "Төркемнең хокукы үзгәртелде"
 permissions_unset = "Хокук ярдәмендә саклау бетерелде"
 persistent_false = "Төркем даими түгел"
 persistent_true = "Төркем даими хәзер"
+player_banned = "%s төркемдә блокланды"
 player_join = "%s төркемгә кушылды"
 player_kicked = "%s төркемнән чыгарылды"
 player_left = "%s төркемнән чыкты"
+player_unbanned = "%s төркемдә блоктан азат ителде"
 
 [server.pv.addon.groups.tooltip]
 group_uuid = "UUID: %s"
