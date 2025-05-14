@@ -1,0 +1,8 @@
+[client.pv.activation]
+broadcast = "Diffusion"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Diffuser à %s"
+
+[server.pv.addon.broadcast.command]
+usage = "Utilisation : /vbroadcastproxy <server|proxy> <server names>"
