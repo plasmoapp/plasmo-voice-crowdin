@@ -44,7 +44,9 @@ success = "&%s присоединился к группе"
 [server.pv.addon.groups.command.join.error]
 already_joined = "&cВы уже присоединились к этой группе"
 banned = "&cВы были заблокированы в этой группе"
+password_arg_missing = "&cЭта группа требует пароль для вступления"
 usage = "&cИспользование: /groups join <uuid группы> [пароль]"
+wrong_password = "&cНеверный пароль"
 
 [server.pv.addon.groups.command.kick.error]
 not_in_group = "&cИгрок не находится в группе"
