@@ -40,6 +40,9 @@ success = "&a你加入了群组"
 already_joined = "&c你已加入此群组"
 usage = "&c用法：/groups join <群组 UUID> [密码]"
 
+[server.pv.addon.groups.command.kick.error]
+usage = "<player>"
+
 [server.pv.addon.groups.command.leave]
 success = "&a你离开了群组"
 
