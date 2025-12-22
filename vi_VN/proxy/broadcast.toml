@@ -1,0 +1,12 @@
+[client.pv.activation]
+broadcast = "Phát Sóng"
+
+[server.pv.addon.broadcast]
+broadcasting_specific = "Phát Sóng cho %s"
+broadcasting_wide = "Phát Sóng trong phạm vi %s"
+
+[server.pv.addon.broadcast.command]
+proxy_set = "Chỉnh chế độ phát sóng proxy"
+server_set = "Chỉnh chế độ phát sóng server thành %s"
+server_usage = "Dùng: /vbroadcastproxy server <tên máy chủ>"
+usage = "Dùng: /vbroadcastproxy server <tên máy chủ>"

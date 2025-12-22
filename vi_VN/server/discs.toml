@@ -1,0 +1,31 @@
+[client.pv.activation]
+discs = "Đĩa nhạc"
+
+[server.pv.addon.discs.actionbar]
+loading = "Đang tải..."
+playing = "Bây giờ đang phát: %s"
+track_not_found = "Bản nhạc không tồn tại: %s"
+
+[server.pv.addon.discs.arg]
+label = "[tên đĩa]"
+search = "<tìm kiếm>"
+url = "<url>"
+
+[server.pv.addon.discs.error]
+erase_wrong_item = "&cKhông thể xóa vật phẩm này"
+get_track_fail = "&cLấy bản nhạc thất bại: %s"
+no_permission = "&cKhông có quyền"
+not_a_record = "&cBạn cần có một đĩa nhạc trên tay để ghi nó"
+not_burnable = "&cĐĩa nhạc này không thể ghi được"
+search_fail = "&cLấy danh sách tìm kím thất bại: %s"
+unknown_subcommand = "&cLệnh con không xác định. Các lệnh hiện có: %s"
+
+[server.pv.addon.discs.format]
+search_entry = "&e%1$s &7bởi %2$s"
+
+[server.pv.addon.discs.success]
+burn = "&a Đĩa nhạc đã ghi. Tên đĩa: %s"
+erase = "&eĐã xóa đĩa nhạc tùy chỉnh"
+
+[server.pv.addon.discs.usage]
+burn = "&cDùng: /discs burn <url> [đặt tên đĩa]"

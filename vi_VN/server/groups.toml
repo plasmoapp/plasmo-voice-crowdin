@@ -1,3 +1,6 @@
+[client.pv.activation]
+groups = "Nhóm"
+
 [server.pv.addon.groups]
 divider = "&8&m-----------------------------------------------------"
 
@@ -15,8 +18,61 @@ leave = "&c← Rời đi"
 next = "&e>"
 prev = "&e<"
 
+[server.pv.addon.groups.command.ban.error]
+already_banned = "&cNgười chơi này đã bị cấm khỏi nhóm rồi"
+usage = "&cDùng: /groups ban <người chơi>"
+
+[server.pv.addon.groups.command.browse.error]
+no_groups = '&cKhông có nhóm. Để tạo nhóm hãy dùng "/groups create"'
+page_not_found = "&cKhông tìm thấy trang"
+
+[server.pv.addon.groups.command.create]
+success = "&aNhóm đã được tạo:"
+
+[server.pv.addon.groups.command.invite]
+success = "&cGửi lời mời cho %s"
+
+[server.pv.addon.groups.command.invite.error]
+already_joined = "&cNgười chơi này đã vào nhóm này rồi"
+banned = "&cNgười chơi này đã bị ban khỏi nhóm"
+invite_self = "&cBạn không thể mời chính bản thân mình"
+usage = "&cDùng: /groups invite <người chơi>"
+
+[server.pv.addon.groups.command.join]
+success = "&aBạn đã vào nhóm"
+
+[server.pv.addon.groups.command.join.error]
+already_joined = "&cBạn đã vào nhóm này rồi"
+banned = "&cBạn đã bị cấm khỏi nhóm"
+password_arg_missing = "&cNhóm này yêu cầu mật khẩu để tham gia"
+usage = "&cDùng: /groups joint <uuid nhóm> [mật khẩu]"
+wrong_password = "&cMật khẩu không đúng"
+
+[server.pv.addon.groups.command.kick.error]
+not_in_group = "&cNgười chơi không có trong nhóm"
+usage = "&cDùng: /groups kich <người chơi>"
+
+[server.pv.addon.groups.command.leave]
+success = "&aBạn đã rời khỏi nhóm"
+
 [server.pv.addon.groups.command.set.error]
+identical_value = "&cGiá trị này giống hệt với giá trọ hiện tại"
+unknown_flag = '&cKhông có flag: "%1$s". Các flaf hiện có: %2$s'
 usage = "&cDùng: /groups set <flag> <giá trị>"
+
+[server.pv.addon.groups.command.transfer.error]
+already_owner = "&cBạn đã là Trưởng nhóm của nhóm này rồi"
+usage = "&cDùng: /groups tranfer <người chơi>"
+
+[server.pv.addon.groups.command.unban.error]
+not_banned = "&cNgười chơi này không bị cấm trong nhóm"
+usage = "&cDùng: /groups unban <người chơi>"
+
+[server.pv.addon.groups.command.unset.error]
+password_not_set = "&cNhóm hiện tại đã không còn được bảo vể bởi mật khẩu"
+permissions_not_set = '&cBộ lọc "Quên hạn" hiện tại đang trống'
+unknown_flag = '&cKhông thể chỉnh flag này "%1$s". Các flag hiện có: %2$s'
+usage = "&cDùng: /groups unset <flag>"
 
 [server.pv.addon.groups.error]
 group_not_found = "&cKhông tìm thấy nhóm"
