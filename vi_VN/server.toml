@@ -1,5 +1,5 @@
 [client.pv.activation]
-proximity = "Phạm vi"
+proximity = "Mọi người"
 
 [server.pv.command.list]
 empty = "không có người chơi nào cài Plasmo Voice"
